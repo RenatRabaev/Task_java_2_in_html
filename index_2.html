@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lesson-02-task-01.js"></script>
+    <script src="lesson-02-task-02.js"></script>
+    <script src="lesson-02-task-03.js"></script>
+    <script src="lesson-02-task-04.js"></script>
+    <script src="lesson-02-task-05.js"></script>
+    <script src="lesson-02-task-06.js"></script>
+    <script src="lesson-02-task-07.js"></script>
+    <script src="lesson-02-task-08.js"></script>
+    <script src="lesson-02-task-09.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>JavaScript For Loop</h1>
+
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+<!-- 1. מערך פשוט:
+צרו מערך עם 5 שמות של תלמידים והדפיסו לקונסול את השמות.
+
+ -->
+
+    <h2>Task 1 : names in Array</h2>
+        <button onclick="myFunctionTask1()">Try it: Task 1</button>
+        <p id="lesson-02-task-01"></p>
+        <script>
+            
+            function myFunctionTask1() {
+                
+                const nameStudent = ["Tomy", "Renat", "Shon", "Bar","Shanel"]
+                let count
+                    for (let i = 0; i < nameStudent.length; i++) {
+
+                        let count = i
+                        
+                    }
+                    document.write("in class has "+ "[" + nameStudent.length +"]" + " students  :")
+             
+                    for (let i = 0; i < nameStudent.length; i++) {
+                        document.write('<table border="1">')
+                            document.write('<tr>')
+                                document.write('<td style="border: 3px solid rgb(7, 11, 243)">' + nameStudent[i] + '</td>')
+                            document.write('</tr>')
+                        document.write('</table>')
+                        
+                    }
+            }
+        </script>
+
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- 2. לוח הכפל מתוחכם:
+צרו את לוח הכפל באמצעות  JAVASCRIPT. הדגישו (באמצעות javascript) את המספרים 50,100,72 -->
+
+
+<h2>Task 2 : multiply table HTML</h2>
+        <button onclick="myFunctionTask2()">Try it: Task 2</button>
+
+            <script>
+                function myFunctionTask2() {
+                    document.write('<table border="1">')
+                    for(let i=1; i <= 10; i++) 
+                    {
+                    document.write('<tr>')
+            
+                    for(let j=1; j <= 10; j++) 
+                    {
+                        let result = i * j
+                            if ((result == 50) || (result == 72) || (result == 100)) {
+                                document.write('<td style="border: 3px solid rgb(7, 11, 243)">' + i * j + '</td>')
+                                
+                            }else {
+                                document.write('<td>' + i * j + '</td>')
+                            }
+                    }
+                    document.write('</tr>')
+                    }
+                document.write('</table>')
+                }
+            </script>
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- 3.
+להלן מובא הקוד הבא:
+  var answer = prompt('Please type a number')
+  console.log(answer)
+
+4.צרו לולאת while שתעצור רק אם המשתמש רושם STOP -->
+
+
+<h2>Task 3 and 4 : what your name? </h2>
+            <button onclick="myFunctionTask3()">Try it: Task 3 and 4</button>
+
+            <p id="lesson-02-task-03"></p>
+
+            <script>
+                function myFunctionTask3() {
+                    let text1;
+                    let person = prompt("Please enter your name:", "to Cancel type 'stop'");
+                        if (person == null || person == "" || person == "stop") {
+                            text1 = "User cancelled the prompt.";
+                        } else {
+                            text1 = "Hello " + person + "! How are you today?";
+                        }
+                        
+                        document.getElementById("lesson-02-task-03").innerHTML = text1;
+                    }
+            </script>
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+        
+
+<!-- 5.צרו "תוכנה" שיוצרת מערכים
+א. לפי המספר שמתקבל יווצר מערך של כל המספרים מאפס ועד כולל המספר המבוקש.
+ב. אם המשתמש לא סיפק מספר...תמשיכו לבקש ממנו עד שייתן מספר תקין. -->
+
+<h2>Task 5 and 6: Create Array </h2>
+
+        <button onclick="myFunctionTask4()">Try it: Task 5 and 6</button>
+
+        <p id="lesson-02-task-04"></p>
+        
+            <script>
+                function myFunctionTask4() {
+                    let num = prompt("task 4 : Please enter size of array:")
+                    let arr1 = []
+                    
+                    for (let j = 0; j <= num; j++) {
+                        arr1.push(j)
+                    }
+                    
+                    document.getElementById("lesson-02-task-04").innerHTML = arr1.toString();
+                }
+                
+            </script>
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+<h2>Task 7 and 8 : Create a square </h2>
+
+<!-- 7.צרו ריבוע עם לולאה וקונסולים -->
+
+        <button onclick="myFunctionTask5()">Try it: Task 7 and 8</button>
+        <p id="lesson-02-task-05"></p>
+            <script>
+                function myFunctionTask5() {
+                    var star =''
+                    var num_i= prompt("task 7 and 8: Please enter size of array:")
+                    for (let i = 1; i <= num_i; i++) {
+                        for (let j = 1; j <= num_i; j++) {
+                            star += '*'
+                            document.getElementById("lesson-02-task-05").innerHTML = star;
+                        }
+                        star += '<br>'
+                    }
+                }
+            </script>
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+<h2>Task 9 : what your name? </h2>
+
+        <button onclick="myFunctionTask6()">Try it: Task 9</button>
+        <p id="lesson-02-task-06"></p>
+
+
+            <script>
+                function myFunctionTask6() {
+                    var triangleSize;
+
+                    while (isNaN(triangleSize) || typeof triangleSize !== 'number' || triangleSize <= 0) {
+                        triangleSize = parseInt(prompt('Enter the middle line of the triangle (a positive number):'));
+                    }
+
+                    for (var i = 1; i <= triangleSize; i++) {
+                        var line1 = '';
+
+                        for (var j = 1; j <= i; j++) {
+                            line1 += '*';
+                        }line1 += '<br>';
+                        document.write(line1)
+                    }
+                    
+                    for (var i = triangleSize - 1; i >= 1; i--) {
+                        var line2 = '';
+                        for (var j = 1; j <= i; j++) {
+                            line2 += '*';
+                        }line2 += '<br>';
+                        document.write(line2)
+                    }
+            }   
+            </script>
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- <h2>Task 7 : what your name? </h2>
+
+        <button onclick="myFunctionTask7()">Try it: Task 7</button>
+        <p id="lesson-02-task-07"></p>
+
+
+            <script>
+                function myFunctionTask7() {
+            
+                }
+                
+            </script> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- <h2>Task 8 : what your name? </h2>
+
+        <button onclick="myFunctionTask8()">Try it: Task 8</button>
+        <p id="lesson-02-task-08"></p>
+
+
+            <script>
+                function myFunctionTask8() {
+            
+                }
+                
+            </script> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- <h2>Task 9 : what your name? </h2>
+
+<button onclick="myFunctionTask9()">Try it: Task 9</button>
+        <p id="lesson-02-task-09"></p>
+
+
+            <script>
+                function myFunctionTask9() {
+            
+                }
+                
+            </script> -->
+
+
+
+</body>
+</html>
